@@ -9,7 +9,7 @@ function preload() {
 }
 
 function create() {
-	game.add.sprite(750,0,'platform');
+	game.add.sprite(0,0,'platform');
 }
 
 function update() {
