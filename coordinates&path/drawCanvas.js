@@ -61,10 +61,10 @@ ctx5.fill();
 
 var c6= document.getElementById('myCanvas6')
 var ctx6 = c6.getContext('2d');
-ctx6.fillstyle='green';
-ctx6.fillrect(0,350,800,150);
+ctx6.fillStyle='green';
+ctx6.fillRect(0,350,800,150);
 ctx6.fillStyle='cyan';
-ctx6.fillrect(0,0,800,350);
+ctx6.fillRect(0,0,800,350);
 ctx6.beginPath();
 ctx6.arc(150,150,80,0,6.25);
 
