@@ -10,6 +10,7 @@ function preload() {
 
 function create() {
 	game.add.sprite(0,0,'platform');
+	game.physics.startSystem(Phaser.Phyisics.ARCADE);
 }
 
 function update() {
