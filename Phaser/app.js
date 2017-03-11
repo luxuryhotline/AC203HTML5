@@ -41,14 +41,7 @@ function create() {
 	player.body.gravity.y = 300;
 	player.body.collideWorldBounds = true;
 	cursors = game.input.keyboard.createCursorKeys();
-	if(cursors.left.isDown){
-		player.body.velocity.x =-150;
-		player.animations.play('left');
-	}
-	else if(cursors.right.isDown){
-		player.body.velocity.x  = 150;
-		player.animations.play('right');
-	}
+
 
 
 }
@@ -57,5 +50,13 @@ function update() {
 	//collision between player and platforms
 	game.physics.arcade.collide(player,platforms);
 
+	if(cursors.left.isDown){
+		player.body.velocity.x =-150;
+		player.animations.play('left');
+	}
+	else if(cursors.right.isDown){
+		player.body.velocity.x  = 150;
+		player.animations.play('right');
+	}
 
 }
