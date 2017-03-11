@@ -14,7 +14,12 @@ function create() {
 	game.add.sprite(0,0,'sky');
 	platforms = game.add.group();
 	platforms.enablebody = true;
-	var ground = platforms.create(0,game.world.height-50,platform);
+	var ground = platforms.create(0,game.world.height-50,'ground');
+	ground.scale.setTo(2,2);
+	ground.body.immovable = true;
+	
+	ledge = platforms.create(400,400,'ground');
+	ledge.body.immovable = true;
 
 }
 
