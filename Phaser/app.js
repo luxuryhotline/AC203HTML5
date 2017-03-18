@@ -58,6 +58,7 @@ function update() {
 	//collision between player and platforms
 	game.physics.arcade.collide(player,platforms);
 	game.physics.arcade.collide(stars,platforms);
+	game.physics.arcade.overlap(player,star,collectStar,null,this);
 
 	if(cursors.left.isDown){
 		player.body.velocity.x =-150;
@@ -74,6 +75,9 @@ function update() {
 	}
 	if (cursors.up.isDown && player.body.touching.down){
 		player.body.velocity.y = -300;
+	}
+	function collectStar(player,star){
+		star.kill();
 	}
 
 }
