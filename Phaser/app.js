@@ -42,6 +42,14 @@ function create() {
 	player.body.collideWorldBounds = true;
 	cursors = game.input.keyboard.createCursorKeys();
 
+	stars = game.add.group();
+	stars.enableBody = true;
+	for ( var i =0; i<12;i++){
+		var star = stars.create(60*i, 20);
+		star.body.gravity.y = 200;
+		star.body.bounce.y = 0.6 + Math.random()*0.3;
+	}
+
 
 
 }
